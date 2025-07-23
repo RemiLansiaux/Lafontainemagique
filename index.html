@@ -1,22 +1,27 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>La Fontaine Magique</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <title>La Fontaine Magique</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>💧 La Fontaine Magique 💧</h1>
-    <p>Fais un vœu et dépose une offrande ✨</p>
-    <div class="buttons">
-      <a href="https://paypal.me/Lafontainemagique?country.x=FR&locale.x=fr_FR&amount=1" target="_blank">1 €</a>
-      <a href="https://paypal.me/Lafontainemagique?country.x=FR&locale.x=fr_FR&amount=2" target="_blank">2 €</a>
-      <a href="https://paypal.me/Lafontainemagique?country.x=FR&locale.x=fr_FR" target="_blank">Autre</a>
+    <audio autoplay loop id="audio">
+        <source src="water.mp3" type="audio/mp3">
+    </audio>
+    <button onclick="toggleSound()" id="muteBtn">🔊</button>
+    <div class="container">
+        <h1>💧 La Fontaine Magique 💧</h1>
+        <p>Fais un vœu et jette une offrande</p>
+        <div class="coins">
+            <button onclick="dropCoin('1')">🪙 1 €</button>
+            <button onclick="dropCoin('2')">🪙 2 €</button>
+            <button onclick="dropCoin('autre')">💎 Autre</button>
+        </div>
+        <textarea placeholder="Ton vœu ici..."></textarea><br>
+        <button class="submit">Soumettre le vœu</button>
     </div>
-    <textarea placeholder="Ton vœu ici..." rows="5" cols="30"></textarea>
-    <button>Soumettre le vœu</button>
-  </div>
+    <script src="script.js"></script>
 </body>
 </html>
